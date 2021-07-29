@@ -1,0 +1,13 @@
+clc;
+clear;
+clear all;
+W = input('W degerinizi giriniz:');
+rho = 1.226;
+Cl = 1.8;
+A = input('alaninizi giriniz:');
+V_stall = sqrt((2*W*9.81)/(Cl*rho*A));
+S_lift_Off  = (V_stall^2*W*9.81)/(2*9.81*2*511719.03);
+V_2 = input('50 feetteki v yi giriniz:');
+S2 = ((v_2^2*V_stall^2)*2*W*9.81)/(2*9.81*2*511719.03);
+S_total = S2+S_lift_Off;
+fprintf('Toplam mesafe: %f',S_total);
