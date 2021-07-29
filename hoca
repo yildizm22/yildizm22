@@ -1,0 +1,58 @@
+[System]
+Name='Untitled'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=16
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='yemek'
+Range=[0 100]
+NumMFs=4
+MF1='k':'trimf',[-25.51 1.5 28.51]
+MF2='n':'trimf',[0 30 60]
+MF3='g':'trimf',[30 60 100]
+MF4='m':'trimf',[60 100 100]
+
+[Input2]
+Name='servis'
+Range=[0 100]
+NumMFs=4
+MF1='K':'trimf',[0 0 30]
+MF2='N':'trimf',[0 30 60]
+MF3='G':'trimf',[30 60 100]
+MF4='M':'trimf',[60 100 100]
+
+[Output1]
+Name='BAHSİS'
+Range=[0 500]
+NumMFs=5
+MF1='h':'trimf',[0 0 50]
+MF2='a':'trimf',[0 50 150]
+MF3='o':'trimf',[50 150 350]
+MF4='y':'trimf',[150 350 500]
+MF5='cy':'trimf',[350 500 500]
+
+[Rules]
+1 1, 1 (1) : 1
+1 2, 2 (1) : 1
+1 3, 3 (1) : 1
+1 4, 3 (1) : 1
+2 1, 2 (1) : 1
+2 2, 3 (1) : 1
+2 3, 3 (1) : 1
+2 4, 4 (1) : 1
+3 1, 2 (1) : 1
+3 2, 3 (1) : 1
+3 3, 4 (1) : 1
+3 4, 5 (1) : 1
+4 1, 3 (1) : 1
+4 2, 4 (1) : 1
+4 3, 5 (1) : 1
+4 4, 5 (1) : 1
